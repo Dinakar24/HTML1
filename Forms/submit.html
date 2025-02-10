@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Full Name</title>
+    </head>
+    <body>
+        <h2>Your Full Name</h2>
+        <p style="color: royalblue;">First Name: <span id="firstName"></span></p>
+        <p style="color: royalblue;">Second Name: <span id="secondName"></span></p>
+
+        <script>
+            // Get the query string parameters
+            const params = new URLSearchParams(window.location.search);
+            const firstName = params.get('firstname');
+            const secondName = params.get('secondname');
+
+            // Display the submitted data
+            document.getElementById('firstName').textContent = firstName;
+            document.getElementById('secondName').textContent = secondName;
+        </script>
+    </body>
+</html>
